@@ -14,8 +14,7 @@ I created this personal blog to document my learning experiences in online cours
 
 ## Technicalities
 
-This blog is, as one can see on the [site][1] and in the [source code][2], is bu
-ilt with [Octopress][3], a blogging software, that builds blogs with static html-files and can be easily configured to deploy on github.
+This blog is, as one can see on the [site][1] and in the [source code][2], is built with [Octopress][3], a blogging software, that builds blogs with static html-files and can be easily configured to deploy on github.
 
 [1]: https://kjackowski.github.io/
 [2]: https://github.com/kjackowski/kjackowski.github.io
