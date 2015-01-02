@@ -4,7 +4,7 @@
   <title><![CDATA[My MOOC Noteblog]]></title>
   <link href="http://kjackowski.github.io/atom.xml" rel="self"/>
   <link href="http://kjackowski.github.io/"/>
-  <updated>2014-12-31T22:22:27+01:00</updated>
+  <updated>2015-01-02T01:12:20+01:00</updated>
   <id>http://kjackowski.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -26,8 +26,7 @@
 
 <h2>Technicalities</h2>
 
-<p>This blog is, as one can see on the <a href="https://kjackowski.github.io/">site</a> and in the <a href="https://github.com/kjackowski/kjackowski.github.io">source code</a>, is bu
-ilt with <a href="http://octopress.org/">Octopress</a>, a blogging software, that builds blogs with static html-files and can be easily configured to deploy on github.</p>
+<p>This blog is, as one can see on the <a href="https://kjackowski.github.io/">site</a> and in the <a href="https://github.com/kjackowski/kjackowski.github.io">source code</a>, is built with <a href="http://octopress.org/">Octopress</a>, a blogging software, that builds blogs with static html-files and can be easily configured to deploy on github.</p>
 ]]></content>
   </entry>
   
