@@ -11,14 +11,20 @@ footer: true
 
 ## CS 50 (x)
 
-- [CS50 on EDx][1]
-- [CS50xHelpers][2] - "a website built by students of CS50 course to help other students"
-- [CS50 on Stackexchange][3]
-- [CS50 on Reddit][4]
-- [The Manual for the CS50 Library][5]
+- [CS50 on EDx][cs1]
+- [CS50xHelpers][cs2] - "a website built by students of CS50 course to help other students"
+- [CS50 on Stackexchange][cs3]
+- [CS50 on Reddit][cs4]
+- [The Manual for the CS50 Library][cs5]
 
-[1]: https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
-[2]: http://www.cs50xhelpers.org/
-[3]: https://cs50.stackexchange.com/
-[4]: https://www.reddit.com/r/cs50/
-[5]: https://manual.cs50.net/library/
+## The C-Programming Language
+
+- [Learn C The Hard Way][c1]
+
+[cs1]: https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
+[cs2]: http://www.cs50xhelpers.org/
+[cs3]: https://cs50.stackexchange.com/
+[cs4]: https://www.reddit.com/r/cs50/
+[cs5]: https://manual.cs50.net/library/
+
+[c1]: http://c.learncodethehardway.org/book/index.html
