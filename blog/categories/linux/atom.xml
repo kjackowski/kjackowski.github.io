@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My MOOC Noteblog]]></title>
-  <link href="http://kjackowski.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Linux | My MOOC Noteblog]]></title>
+  <link href="http://kjackowski.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://kjackowski.github.io/"/>
   <updated>2015-01-05T20:25:31+01:00</updated>
   <id>http://kjackowski.github.io/</id>
@@ -31,16 +31,13 @@
 
 <p>After that, I began to search for instructions for the other tools of the appliance, most important the check50 script. A nice <a href="https://medium.com/@ddiipp/take-harvards-cs50-without-cs50-appliance-8372acb91314">blogpost on medium</a> showed me where to look, but sadly the mentioned git-repository was deleted since then. I found a <a href="https://github.com/jthurner/check50">copy of it on github</a> and tried to install it. Worked fine. But the most interesting part of it was the question: will it work with the current course?</p>
 
-<p>For convenience I quickly made alias for it:</p>
+<p>For convenience I quickly made alias for it:
+<code>bash
+alias check50="node /"path to my cs 50 folder"/cs50/check50/SOURCES/opt/check50/bin/check50.js"
+</code></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">check50</span><span class="o">=</span><span class="s2">&quot;node /&quot;</span>path to my cs <span class="m">50</span> folder<span class="s2">&quot;/cs50/check50/SOURCES/opt/check50/bin/check50.js&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, I tried the <a href="http://cdn.cs50.net/2015/x/psets/1/pset1/pset1.html#hello_c">example code from the coursesite</a>:</p>
-
-<figure class='code'><figcaption><span>[Hello World - The first try] (hello-0.1.c)</span> <a href='http://kjackowski.github.io/downloads/code/hello-0.1.c'>download</a></figcaption>
+<p>After that, I tried the <a href="http://cdn.cs50.net/2015/x/psets/1/pset1/pset1.html#hello_c">example code from the coursesite</a>:
+<figure class='code'><figcaption><span>[Hello World - The first try] (hello-0.1.c)</span> <a href='/downloads/code/hello-0.1.c'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -53,29 +50,21 @@
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This compiled without visible errors, but when I made the compiling a little more verbose, I got this:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ CFLAGS</span><span class="o">=</span><span class="s2">&quot;-Wall&quot;</span> make hello
-</span><span class='line'>cc -Wall    hello.c   -o hello
-</span><span class='line'>hello.c: In <span class="k">function</span> ‘main’:
-</span><span class='line'>hello.c:6:1: warning: control reaches end of non-void <span class="k">function</span> <span class="o">[</span>-Wreturn-type<span class="o">]</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'>^
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="bash">$ CFLAGS="-Wall" make hello
+cc -Wall    hello.c   -o hello
+hello.c: In function ‘main’:
+hello.c:6:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+</code></pre>
 
 <p>One line more and the more verbose compiling also went on without errors:</p>
 
-<figure class='code'><figcaption><span>[Hello World - Without Warnings] (hello.c)</span> <a href='http://kjackowski.github.io/downloads/code/hello.c'>download</a></figcaption>
+<p><figure class='code'><figcaption><span>[Hello World - Without Warnings] (hello.c)</span> <a href='/downloads/code/hello.c'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -90,40 +79,17 @@
 </span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 </span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Time to use the code to test the check50 function with the new course:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>check50 2014.fall.pset1.hello hello.c
-</span><span class='line'>:<span class="o">)</span> hello.c exists
-</span><span class='line'>:<span class="o">)</span> hello.c compiles
-</span><span class='line'>:<span class="o">)</span> prints <span class="s2">&quot;hello, world\n&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="bash">$ check50 2014.fall.pset1.hello hello.c
+:) hello.c exists
+:) hello.c compiles
+:) prints "hello, world\n"
+</code></pre>
 
 <p>That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that <a href="http://octopress.org">Octopress</a> provides for embedding code into blogposts.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A Blog, Nothing Less, Nothing More]]></title>
-    <link href="http://kjackowski.github.io/blog/2014/12/31/hello-world/"/>
-    <updated>2014-12-31T17:54:44+01:00</updated>
-    <id>http://kjackowski.github.io/blog/2014/12/31/hello-world</id>
-    <content type="html"><![CDATA[<p>This is also the README for the <a href="https://github.com/kjackowski/kjackowski.github.io">source code of my blog</a>.</p>
-
-<h2>Intention</h2>
-
-<p>I created this personal blog to document my learning experiences in online courses. I have already taken some courses, but often strayed awy after some time. This is something I want to change in the new year 2015. Therefore: A Blog. Here I want to write about what I learned and what I struggle with. Since I will learn something about code, I will probably also post some things related to coding in general, not only about the courses, that I take part in.</p>
-
-<h2>Technicalities</h2>
-
-<p>This blog is, as one can see on the <a href="https://kjackowski.github.io/">site</a> and in the <a href="https://github.com/kjackowski/kjackowski.github.io">source code</a>, is built with <a href="http://octopress.org/">Octopress</a>, a blogging software, that builds blogs with static html-files and can be easily configured to deploy on github.</p>
 ]]></content>
   </entry>
   

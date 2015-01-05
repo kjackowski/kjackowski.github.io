@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting Up the Tools for CS 50 - My MOOC Noteblog</title>
+  <meta name="author" content="Knut Jackowski">
+
+  
+  <meta name="description" content="So CS 50 has officially begun. Time to get my computer ready for the work. The installation and use of the appliance is covered in great detail on &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kjackowski.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My MOOC Noteblog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My MOOC Noteblog</a></h1>
+  
+    <h2>This is where I write about my learning</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="kjackowski.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Links</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting Up the Tools for CS 50</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T13:45:11+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:45 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So CS 50 has officially begun. Time to get my computer ready for the work.</p>
+
+<p>The installation and use of the appliance is covered in great detail on the coursepages, so there is no need to describe it here. What I do different is that I plan to work mostly outside of the appliance, because my computer is barely able to run it and it is a pain in the backside to use it for longer periods (It&rsquo;s an old laptop, that wasn&rsquo;t powerful even when it was new.).</p>
+
+<!-- more -->
+
+
+<p>Since I am using Linux on my computer as the main operating system, setting it up for coding is not so big a task. Most of the packages are allready installed by me (the most important would be &ldquo;build-essential&rdquo;, a metapackage, that brings compilers and stuff). Getting the functions from CS 50 to work is another thing.</p>
+
+<p>First I followed the instructions on the <a href="https://manual.cs50.net/library/">manual</a> for the CS 50 libraries. It was a lot of copy/pasting, but in the end the libraries in all four languages worked fine.</p>
+
+<p>After that, I began to search for instructions for the other tools of the appliance, most important the check50 script. A nice <a href="https://medium.com/@ddiipp/take-harvards-cs50-without-cs50-appliance-8372acb91314">blogpost on medium</a> showed me where to look, but sadly the mentioned git-repository was deleted since then. I found a <a href="https://github.com/jthurner/check50">copy of it on github</a> and tried to install it. Worked fine. But the most interesting part of it was the question: will it work with the current course?</p>
+
+<p>For convenience I quickly made alias for it:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">check50</span><span class="o">=</span><span class="s2">&quot;node /&quot;</span>path to my cs <span class="m">50</span> folder<span class="s2">&quot;/cs50/check50/SOURCES/opt/check50/bin/check50.js&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that, I tried the <a href="http://cdn.cs50.net/2015/x/psets/1/pset1/pset1.html#hello_c">example code from the coursesite</a>:</p>
+
+<figure class='code'><figcaption><span>[Hello World - The first try] (hello-0.1.c)</span> <a href='/downloads/code/hello-0.1.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This compiled without visible errors, but when I made the compiling a little more verbose, I got this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ CFLAGS</span><span class="o">=</span><span class="s2">&quot;-Wall&quot;</span> make hello
+</span><span class='line'>cc -Wall    hello.c   -o hello
+</span><span class='line'>hello.c: In <span class="k">function</span> ‘main’:
+</span><span class='line'>hello.c:6:1: warning: control reaches end of non-void <span class="k">function</span> <span class="o">[</span>-Wreturn-type<span class="o">]</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>^
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One line more and the more verbose compiling also went on without errors:</p>
+
+<figure class='code'><figcaption><span>[Hello World - Without Warnings] (hello.c)</span> <a href='/downloads/code/hello.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Time to use the code to test the check50 function with the new course:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>check50 2014.fall.pset1.hello hello.c
+</span><span class='line'>:<span class="o">)</span> hello.c exists
+</span><span class='line'>:<span class="o">)</span> hello.c compiles
+</span><span class='line'>:<span class="o">)</span> prints <span class="s2">&quot;hello, world\n&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that <a href="http://octopress.org">Octopress</a> provides for embedding code into blogposts.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Knut Jackowski</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T13:45:11+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:45 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kjackowski.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/" data-via="doxanthropos" data-counturl="http://kjackowski.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/12/31/hello-world/" title="Previous Post: A blog, nothing less, nothing more">&laquo; A blog, nothing less, nothing more</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Setting Up the Tools for CS 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/31/hello-world/">A Blog, Nothing Less, Nothing More</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/kjackowski">@kjackowski</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'kjackowski',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Knut Jackowski -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'noteblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kjackowski.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/';
+        var disqus_url = 'http://kjackowski.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
