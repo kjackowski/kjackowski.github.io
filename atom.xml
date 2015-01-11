@@ -4,7 +4,7 @@
   <title><![CDATA[My MOOC Noteblog]]></title>
   <link href="http://kjackowski.github.io/atom.xml" rel="self"/>
   <link href="http://kjackowski.github.io/"/>
-  <updated>2015-01-05T20:25:31+01:00</updated>
+  <updated>2015-01-11T14:58:51+01:00</updated>
   <id>http://kjackowski.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Python: Free Resources]]></title>
+    <link href="http://kjackowski.github.io/blog/2015/01/11/learning-python/"/>
+    <updated>2015-01-11T14:51:15+01:00</updated>
+    <id>http://kjackowski.github.io/blog/2015/01/11/learning-python</id>
+    <content type="html"><![CDATA[<p>This is a list of free online books and other resources for anybody interested in learning the Python programming language. There are other lists out there, this one contains only items, that I have personally tried and found useful.</p>
+
+<ul>
+<li><a href="http://www.codecademy.com/">Codecademy</a>: A website with interactive tutorials.</li>
+<li><a href="http://www.pythonlearn.com/">PythonLearn</a>: A website and a book with videos and autograded exercises. It is the material used for the Coursera-course <a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody</a> by Charles Severance.</li>
+<li><a href="https://www.udacity.com/course/cs101">Udacity: Intro to Computer Science &amp; Programming CS 101</a>: A complete introduction to Computer Science with Python.</li>
+<li><a href="http://www.greenteapress.com/thinkpython/">Think Python: How to Think Like a Computer Scientist</a>: A book that is also an introduction to Computer Science as well as an introduction to Python. If you have succeded in learning Python (at least to a reasonable degree), the author might still be of interest to you, there are some more advanced books on his website.</li>
+<li><a href="http://learnpythonthehardway.org/book/">Learn Python The Hard Way</a>: A very good book about Python and Programming in general. Not really hard.</li>
+<li>Last but not least: <a href="https://docs.python.org/2/tutorial/index.html">The Python Tutorial</a> - The official tutorial by Python.org.</li>
+</ul>
+
+
+<p>Have fun!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting Up the Tools for CS 50]]></title>
